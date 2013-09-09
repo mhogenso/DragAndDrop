@@ -12,8 +12,8 @@
 @interface DADDragViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
-@property (weak, nonatomic) IBOutlet DADDragView *dragView;
-@property (weak, nonatomic) IBOutlet DADDragView *dragView2;
+@property (assign, nonatomic) IBOutlet DADDragView *dragView;
+@property (assign, nonatomic) IBOutlet DADDragView *dragView2;
 @property (assign, nonatomic) CGPoint offset;
 @property (assign, nonatomic) CGPoint startPos;
 
@@ -35,7 +35,7 @@
     [super viewDidLoad];
     
     _dragView.touchBegan = ^(UITouch *touch){
-        DADDragView *view = [touch view];
+        DADDragView *view = (DADDragView*)[touch view];
         _offset = [touch locationInView:[touch view]];
         _startPos = _dragView.frame.origin;
         
@@ -45,7 +45,7 @@
     };
     
     _dragView.touchMoved = ^(UITouch *touch){
-        DADDragView *view = [touch view];
+        DADDragView *view = (DADDragView*)[touch view];
         CGPoint pointInController = [touch locationInView:self.view];
         
         CGRect frame = view.frame;
