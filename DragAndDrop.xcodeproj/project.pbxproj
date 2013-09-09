@@ -25,6 +25,8 @@
 		4C1FEFC617D7ACC800C380D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C1FEFC417D7ACC800C380D3 /* InfoPlist.strings */; };
 		4C1FEFC917D7ACC800C380D3 /* DragAndDropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1FEFC817D7ACC800C380D3 /* DragAndDropTests.m */; };
 		4C1FEFD417D7ADD000C380D3 /* DADTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1FEFD317D7ADD000C380D3 /* DADTileView.m */; };
+		4C6643B017DD557200037585 /* DADDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6643AF17DD557200037585 /* DADDragView.m */; };
+		4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6643B217DD58FC00037585 /* DADDragViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		4C1FEFC817D7ACC800C380D3 /* DragAndDropTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragAndDropTests.m; sourceTree = "<group>"; };
 		4C1FEFD217D7ADD000C380D3 /* DADTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADTileView.h; sourceTree = "<group>"; };
 		4C1FEFD317D7ADD000C380D3 /* DADTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADTileView.m; sourceTree = "<group>"; };
+		4C6643AE17DD557200037585 /* DADDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADDragView.h; sourceTree = "<group>"; };
+		4C6643AF17DD557200037585 /* DADDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADDragView.m; sourceTree = "<group>"; };
+		4C6643B117DD58FC00037585 /* DADDragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADDragViewController.h; sourceTree = "<group>"; };
+		4C6643B217DD58FC00037585 /* DADDragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADDragViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +130,16 @@
 			children = (
 				4C1FEFA317D7ACC700C380D3 /* DADAppDelegate.h */,
 				4C1FEFA417D7ACC700C380D3 /* DADAppDelegate.m */,
-				4C1FEFAC17D7ACC700C380D3 /* MainStoryboard_iPhone.storyboard */,
-				4C1FEFAF17D7ACC700C380D3 /* MainStoryboard_iPad.storyboard */,
-				4C1FEFB217D7ACC700C380D3 /* DADViewController.h */,
-				4C1FEFB317D7ACC700C380D3 /* DADViewController.m */,
+				4C6643AE17DD557200037585 /* DADDragView.h */,
+				4C6643AF17DD557200037585 /* DADDragView.m */,
+				4C6643B117DD58FC00037585 /* DADDragViewController.h */,
+				4C6643B217DD58FC00037585 /* DADDragViewController.m */,
 				4C1FEFD217D7ADD000C380D3 /* DADTileView.h */,
 				4C1FEFD317D7ADD000C380D3 /* DADTileView.m */,
+				4C1FEFB217D7ACC700C380D3 /* DADViewController.h */,
+				4C1FEFB317D7ACC700C380D3 /* DADViewController.m */,
+				4C1FEFAF17D7ACC700C380D3 /* MainStoryboard_iPad.storyboard */,
+				4C1FEFAC17D7ACC700C380D3 /* MainStoryboard_iPhone.storyboard */,
 				4C1FEF9B17D7ACC700C380D3 /* Supporting Files */,
 			);
 			path = DragAndDrop;
@@ -284,6 +294,8 @@
 				4C1FEFA517D7ACC700C380D3 /* DADAppDelegate.m in Sources */,
 				4C1FEFB417D7ACC800C380D3 /* DADViewController.m in Sources */,
 				4C1FEFD417D7ADD000C380D3 /* DADTileView.m in Sources */,
+				4C6643B017DD557200037585 /* DADDragView.m in Sources */,
+				4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
