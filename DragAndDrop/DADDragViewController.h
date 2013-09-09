@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DADDragViewControllerDelegate;
+
 @interface DADDragViewController : UIViewController
+
+@property (assign, nonatomic) CGPoint point1;
+@property (assign, nonatomic) CGPoint point2;
+
+@property (weak, nonatomic) id<DADDragViewControllerDelegate> delegate;
+
+@property (copy, nonatomic)  void (^didFinishBlock)();
+
+@end
+
+@protocol DADDragViewControllerDelegate <NSObject>
+
+- (void)dragViewControllerDidFinish:(DADDragViewController *)viewController;
 
 @end

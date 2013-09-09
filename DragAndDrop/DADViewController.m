@@ -8,6 +8,7 @@
 
 #import "DADViewController.h"
 #import "DADTileView.h"
+#import "DADDragViewController.h"
 
 @interface DADViewController ()
 
@@ -17,6 +18,9 @@
 @property (strong, nonatomic) DADTileView *newtile;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 
+@property (assign, nonatomic) CGPoint dragView1;
+@property (assign, nonatomic) CGPoint dragView2;
+
 @end
 
 @implementation DADViewController
@@ -24,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _dragView1 = CGPointMake(200, 58);
+    _dragView2 = CGPointMake(200, 138);
     
     _tile.touchBegan = ^(UITouch *touch){
         _offset = [touch locationInView:[touch view]];
@@ -59,6 +66,29 @@
     
     
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"mySegue"]) {
+        __weak DADDragViewController *viewController = (DADDragViewController *)segue.destinationViewController;
+        
+        viewController.point1 = _dragView1;
+        viewController.point2 = _dragView2;
+        viewController.delegate = self;
+        
+        
+//        viewController.didFinishBlock = ^{
+//            _dragView1 = viewController.point1;
+//            _dragView2 = viewController.point2;
+//            [self.navigationController popViewControllerAnimated:YES];
+//        };
+    }
+}
+
+- (void) dragViewControllerDidFinish:(DADDragViewController *)viewController {
+    _dragView1 = viewController.point1;
+    _dragView2 = viewController.point2;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

@@ -33,6 +33,15 @@
 {
     [super viewDidLoad];
     
+    CGRect frame = _dragView.frame;
+    frame.origin = _point1;
+    _dragView.frame = frame;
+    
+    frame = _dragView2.frame;
+    frame.origin = _point2;
+    _dragView2.frame = frame;
+    
+    
     _dragView.touchBegan = ^(UITouch *touch){
         DADDragView *view = (DADDragView*)[touch view];
         _offset = [touch locationInView:[touch view]];
@@ -53,12 +62,20 @@
     };
     
     _dragView.touchEnded = ^(UITouch *touch){
-        
+        if (touch.view == _dragView)
+            _point1 = touch.view.frame.origin;
+        else if (touch.view == _dragView2)
+            _point2 = touch.view.frame.origin;
     };
     
     _dragView2.touchBegan = _dragView.touchBegan;
     _dragView2.touchMoved = _dragView.touchMoved;
-    _dragView2.touchEnded = _dragView2.touchEnded;
+    _dragView2.touchEnded = _dragView.touchEnded;
+}
+
+- (IBAction)doneButtonTapped:(id)sender {
+//    _didFinishBlock();
+    [_delegate dragViewControllerDidFinish:self];
 }
 
 - (void)didReceiveMemoryWarning

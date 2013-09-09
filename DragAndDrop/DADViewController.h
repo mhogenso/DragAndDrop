@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DADDragViewController.h"
 
-@interface DADViewController : UIViewController
+@interface DADViewController : UIViewController <DADDragViewControllerDelegate>
 
 @end
