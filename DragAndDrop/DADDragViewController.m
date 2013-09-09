@@ -62,6 +62,9 @@
     _dragView2.touchMoved = _dragView.touchMoved;
     _dragView2.touchEnded = _dragView2.touchEnded;
 }
+- (IBAction)backTouch:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
 
 - (void)didReceiveMemoryWarning
 {
