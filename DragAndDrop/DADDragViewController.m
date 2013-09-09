@@ -11,7 +11,6 @@
 
 @interface DADDragViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (assign, nonatomic) IBOutlet DADDragView *dragView;
 @property (assign, nonatomic) IBOutlet DADDragView *dragView2;
 @property (assign, nonatomic) CGPoint offset;
@@ -41,7 +40,6 @@
         
         // Bring the button to the front.
         [self.view bringSubviewToFront:view];
-        [self.view bringSubviewToFront:_backButton];
     };
     
     _dragView.touchMoved = ^(UITouch *touch){
@@ -61,9 +59,6 @@
     _dragView2.touchBegan = _dragView.touchBegan;
     _dragView2.touchMoved = _dragView.touchMoved;
     _dragView2.touchEnded = _dragView2.touchEnded;
-}
-- (IBAction)backTouch:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:Nil];
 }
 
 - (void)didReceiveMemoryWarning

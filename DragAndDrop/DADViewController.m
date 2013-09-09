@@ -16,7 +16,6 @@
 @property (assign, nonatomic) CGPoint offset;
 @property (strong, nonatomic) DADTileView *newtile;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
@@ -39,7 +38,6 @@
         // NSLog(@"%f %f", point.x, point.y);
         
         // Bring the button to the front.
-        [self.view bringSubviewToFront:_nextButton];
         [self.view bringSubviewToFront:_resetButton];
     };
     
@@ -70,7 +68,7 @@
 }
 - (IBAction)resetTouch:(id)sender {
     for (UIView *subview in self.view.subviews) {
-        if (![subview isEqual:sender] && ![subview isEqual:(_tile)] && ![subview isEqual:_nextButton]) {
+        if (![subview isEqual:sender] && ![subview isEqual:(_tile)]) {
             [subview removeFromSuperview];
         }
     }
