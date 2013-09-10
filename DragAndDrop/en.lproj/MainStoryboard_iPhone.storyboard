@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="cgY-T1-oni">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A569" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="s6P-kQ-L9S">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Foo-->
+        <!--View Controller - Drag and Clone-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="DADViewController" sceneMemberID="viewController">
@@ -35,13 +35,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Foo" id="fvs-cQ-C9U">
-                        <barButtonItem key="rightBarButtonItem" title="Next View" id="8XX-LL-fzm">
-                            <connections>
-                                <segue destination="pIY-TW-bGr" kind="push" identifier="mySegue" id="Ds8-T8-flr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Drag and Clone" id="fvs-cQ-C9U"/>
                     <connections>
                         <outlet property="resetButton" destination="kKo-IT-iDM" id="dgW-II-10n"/>
                         <outlet property="tile" destination="qEb-gp-lWb" id="T7F-vA-DNJ"/>
@@ -49,9 +43,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="179"/>
+            <point key="canvasLocation" x="1116" y="-393"/>
         </scene>
-        <!--Drag View Controller-->
+        <!--Drag View Controller - Drag and Drop-->
         <scene sceneID="gTW-FR-zD0">
             <objects>
                 <viewController modalTransitionStyle="partialCurl" id="pIY-TW-bGr" customClass="DADDragViewController" sceneMemberID="viewController">
@@ -72,13 +66,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zVu-md-XrF">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="730-c0-avZ">
-                            <connections>
-                                <action selector="doneButtonTapped:" destination="pIY-TW-bGr" id="Bl0-4P-Nch"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Drag and Drop" id="zVu-md-XrF"/>
                     <connections>
                         <outlet property="dragView" destination="RMt-EO-8fK" id="Tup-PL-8Hi"/>
                         <outlet property="dragView2" destination="0MA-lb-0ER" id="Rl8-s2-2s2"/>
@@ -86,51 +74,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="576-rV-GKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="179"/>
+            <point key="canvasLocation" x="1508" y="159"/>
+        </scene>
+        <!--Menu Controller - Experiments-->
+        <scene sceneID="9Yd-PW-IZn">
+            <objects>
+                <tableViewController id="SSf-09-Qs1" customClass="DADMenuController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="guP-0k-v0G">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="oLS-3e-EPK" style="IBUITableViewCellStyleDefault" id="H09-pM-fY1">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oLS-3e-EPK">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SSf-09-Qs1" id="xOA-F8-17B"/>
+                            <outlet property="delegate" destination="SSf-09-Qs1" id="LEZ-56-9bf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Experiments" id="tHn-2e-OrQ"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="menuView" destination="guP-0k-v0G" id="DgI-Hu-4PS"/>
+                        <segue destination="2" kind="push" identifier="segue1" id="Nf2-bi-IlA"/>
+                        <segue destination="pIY-TW-bGr" kind="push" identifier="segue2" id="a8f-5k-Gec"/>
+                        <segue destination="64W-5E-q4C" kind="push" identifier="segue3" id="UnC-Ua-V1e"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8x0-Kr-qMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="159"/>
+        </scene>
+        <!--View Controller - Drag Across-->
+        <scene sceneID="Ml0-05-saf">
+            <objects>
+                <viewController id="64W-5E-q4C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lak-Ws-RCX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drag Across" id="BUQ-Is-B8n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUU-WW-f6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="707"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ecI-ec-4yA">
+        <scene sceneID="7DO-g8-rQ6">
             <objects>
-                <navigationController id="cgY-T1-oni" sceneMemberID="viewController">
+                <navigationController id="s6P-kQ-L9S" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VU8-g2-Hzw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bT6-mo-Wnh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Xpk-nf-skT"/>
+                        <segue destination="SSf-09-Qs1" kind="relationship" relationship="rootViewController" id="Kap-EX-nqJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SJQ-eO-z0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Bn-zZ-Ycz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="179"/>
+            <point key="canvasLocation" x="237" y="159"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DADDragView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragView.h"/>
-        </class>
-        <class className="DADDragViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonTapped:"/>
-                <relationship kind="outlet" name="dragView" candidateClass="DADDragView"/>
-                <relationship kind="outlet" name="dragView2" candidateClass="DADDragView"/>
-            </relationships>
-        </class>
-        <class className="DADTileView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADTileView.h"/>
-        </class>
-        <class className="DADViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="resetTouch:"/>
-                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tile" candidateClass="DADTileView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
