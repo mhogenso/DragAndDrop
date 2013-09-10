@@ -24,7 +24,6 @@
 		4C1FEFBE17D7ACC800C380D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FEF9617D7ACC700C380D3 /* Foundation.framework */; };
 		4C1FEFC617D7ACC800C380D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C1FEFC417D7ACC800C380D3 /* InfoPlist.strings */; };
 		4C1FEFC917D7ACC800C380D3 /* DragAndDropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1FEFC817D7ACC800C380D3 /* DragAndDropTests.m */; };
-		4C1FEFD417D7ADD000C380D3 /* DADTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1FEFD317D7ADD000C380D3 /* DADTileView.m */; };
 		4C6643B017DD557200037585 /* DADDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6643AF17DD557200037585 /* DADDragView.m */; };
 		4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6643B217DD58FC00037585 /* DADDragViewController.m */; };
 		4CBB434B17DEF64300CA4251 /* DADDragAcrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB434A17DEF64300CA4251 /* DADDragAcrossViewController.m */; };
@@ -65,8 +64,6 @@
 		4C1FEFC517D7ACC800C380D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C1FEFC717D7ACC800C380D3 /* DragAndDropTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DragAndDropTests.h; sourceTree = "<group>"; };
 		4C1FEFC817D7ACC800C380D3 /* DragAndDropTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragAndDropTests.m; sourceTree = "<group>"; };
-		4C1FEFD217D7ADD000C380D3 /* DADTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADTileView.h; sourceTree = "<group>"; };
-		4C1FEFD317D7ADD000C380D3 /* DADTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADTileView.m; sourceTree = "<group>"; };
 		4C6643AE17DD557200037585 /* DADDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADDragView.h; sourceTree = "<group>"; };
 		4C6643AF17DD557200037585 /* DADDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADDragView.m; sourceTree = "<group>"; };
 		4C6643B117DD58FC00037585 /* DADDragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADDragViewController.h; sourceTree = "<group>"; };
@@ -144,8 +141,6 @@
 				4C6643B217DD58FC00037585 /* DADDragViewController.m */,
 				4CCAD05017DE9D4F008FDC5F /* DADMenuController.h */,
 				4CCAD05117DE9D4F008FDC5F /* DADMenuController.m */,
-				4C1FEFD217D7ADD000C380D3 /* DADTileView.h */,
-				4C1FEFD317D7ADD000C380D3 /* DADTileView.m */,
 				4C1FEFB217D7ACC700C380D3 /* DADViewController.h */,
 				4C1FEFB317D7ACC700C380D3 /* DADViewController.m */,
 				4C1FEFAF17D7ACC700C380D3 /* MainStoryboard_iPad.storyboard */,
@@ -303,7 +298,6 @@
 				4C1FEFA117D7ACC700C380D3 /* main.m in Sources */,
 				4C1FEFA517D7ACC700C380D3 /* DADAppDelegate.m in Sources */,
 				4C1FEFB417D7ACC800C380D3 /* DADViewController.m in Sources */,
-				4C1FEFD417D7ADD000C380D3 /* DADTileView.m in Sources */,
 				4C6643B017DD557200037585 /* DADDragView.m in Sources */,
 				4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */,
 				4CCAD05217DE9D4F008FDC5F /* DADMenuController.m in Sources */,

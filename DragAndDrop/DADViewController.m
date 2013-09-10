@@ -7,15 +7,15 @@
 //
 
 #import "DADViewController.h"
-#import "DADTileView.h"
+#import "DADDragView.h"
 #import "DADDragViewController.h"
 
 @interface DADViewController ()
 
 // atomic is thread safe
-@property (weak, nonatomic) IBOutlet DADTileView *tile;
+@property (weak, nonatomic) IBOutlet DADDragView *tile;
 @property (assign, nonatomic) CGPoint offset;
-@property (strong, nonatomic) DADTileView *newtile;
+@property (strong, nonatomic) DADDragView *newtile;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 
 @property (assign, nonatomic) CGPoint dragView1;
@@ -34,7 +34,7 @@
     
     _tile.touchBegan = ^(UITouch *touch){
         _offset = [touch locationInView:[touch view]];
-        _newtile = [[DADTileView alloc] init];
+        _newtile = [[DADDragView alloc] init];
         _newtile.touchBegan = _tile.touchBegan;
         _newtile.touchMoved = _tile.touchMoved;
         _newtile.touchEnded = _tile.touchEnded;
