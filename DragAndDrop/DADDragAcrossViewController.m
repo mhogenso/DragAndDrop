@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIView *sidebar;
 @property (assign, nonatomic) IBOutlet DADDragView *redTile;
 @property (weak, nonatomic) IBOutlet DADDragView *blueTile;
+@property (weak, nonatomic) IBOutlet DADDragView *greenTile;
 @property (assign, nonatomic) CGPoint offset;
 @property (assign, nonatomic) CGPoint startPos;
 @property (strong, nonatomic) DADDragView *dragTile;
@@ -85,6 +86,10 @@
     _blueTile.touchBegan = _redTile.touchBegan;
     _blueTile.touchMoved = _redTile.touchMoved;
     _blueTile.touchEnded = _redTile.touchEnded;
+    
+    _greenTile.touchBegan = _redTile.touchBegan;
+    _greenTile.touchMoved = _redTile.touchMoved;
+    _greenTile.touchEnded = _redTile.touchEnded;
 }
 
 - (void)didReceiveMemoryWarning
