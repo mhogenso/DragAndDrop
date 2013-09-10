@@ -129,6 +129,25 @@
                     <view key="view" contentMode="scaleToFill" id="Lak-Ws-RCX">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="ggU-Lb-mlV">
+                                <rect key="frame" x="209" y="0.0" width="111" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="FEL-wl-ACW">
+                                        <rect key="frame" x="5" y="14" width="100" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.78804347829999999" green="0.096783571910000005" blue="0.087492827699999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="MT5-zK-7oJ">
+                                        <rect key="frame" x="5" y="82" width="100" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.2531024127" green="0.26113535180000003" blue="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Drag Across" id="BUQ-Is-B8n"/>
@@ -156,6 +175,35 @@
             <point key="canvasLocation" x="237" y="159"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DADDragView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragView.h"/>
+        </class>
+        <class className="DADDragViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneButtonTapped:"/>
+                <relationship kind="outlet" name="dragView" candidateClass="DADDragView"/>
+                <relationship kind="outlet" name="dragView2" candidateClass="DADDragView"/>
+            </relationships>
+        </class>
+        <class className="DADMenuController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADMenuController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="menuView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="DADTileView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADTileView.h"/>
+        </class>
+        <class className="DADViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tile" candidateClass="DADTileView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
