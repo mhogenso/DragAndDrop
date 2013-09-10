@@ -9,6 +9,8 @@
 #import "DADDragAcrossViewController.h"
 #import "DADDragView.h"
 
+#define DAD_ANIMATION_DURATION 0.3
+
 @interface DADDragAcrossViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *sidebar;
@@ -65,7 +67,12 @@
         [_dragTile setBackgroundColor:[view backgroundColor]];
         [self.view addSubview:_dragTile];
         
-        _sidebar.hidden=YES;
+        [UIView animateWithDuration:DAD_ANIMATION_DURATION
+                         animations:^{
+                             CGRect frame = _sidebar.frame;
+                             frame.origin.x += frame.size.width;
+                             _sidebar.frame = frame;
+                         }];
     };
     
     _redTile.touchMoved = ^(UITouch *touch){
@@ -79,8 +86,14 @@
     };
     
     _redTile.touchEnded = ^(UITouch *touch){
-        _sidebar.hidden = NO;
         [self.view bringSubviewToFront:_sidebar];
+        
+        [UIView animateWithDuration:DAD_ANIMATION_DURATION
+                         animations:^{
+                             CGRect frame = _sidebar.frame;
+                             frame.origin.x -= frame.size.width;
+                             _sidebar.frame = frame;
+                         }];
     };
     
     _blueTile.touchBegan = _redTile.touchBegan;
