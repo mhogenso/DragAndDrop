@@ -27,6 +27,7 @@
 		4C1FEFD417D7ADD000C380D3 /* DADTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1FEFD317D7ADD000C380D3 /* DADTileView.m */; };
 		4C6643B017DD557200037585 /* DADDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6643AF17DD557200037585 /* DADDragView.m */; };
 		4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6643B217DD58FC00037585 /* DADDragViewController.m */; };
+		4CBB434B17DEF64300CA4251 /* DADDragAcrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB434A17DEF64300CA4251 /* DADDragAcrossViewController.m */; };
 		4CCAD05217DE9D4F008FDC5F /* DADMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAD05117DE9D4F008FDC5F /* DADMenuController.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		4C6643AF17DD557200037585 /* DADDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADDragView.m; sourceTree = "<group>"; };
 		4C6643B117DD58FC00037585 /* DADDragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADDragViewController.h; sourceTree = "<group>"; };
 		4C6643B217DD58FC00037585 /* DADDragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADDragViewController.m; sourceTree = "<group>"; };
+		4CBB434917DEF64300CA4251 /* DADDragAcrossViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADDragAcrossViewController.h; sourceTree = "<group>"; };
+		4CBB434A17DEF64300CA4251 /* DADDragAcrossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADDragAcrossViewController.m; sourceTree = "<group>"; };
 		4CCAD05017DE9D4F008FDC5F /* DADMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADMenuController.h; sourceTree = "<group>"; };
 		4CCAD05117DE9D4F008FDC5F /* DADMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADMenuController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +138,8 @@
 				4C1FEFA417D7ACC700C380D3 /* DADAppDelegate.m */,
 				4C6643AE17DD557200037585 /* DADDragView.h */,
 				4C6643AF17DD557200037585 /* DADDragView.m */,
+				4CBB434917DEF64300CA4251 /* DADDragAcrossViewController.h */,
+				4CBB434A17DEF64300CA4251 /* DADDragAcrossViewController.m */,
 				4C6643B117DD58FC00037585 /* DADDragViewController.h */,
 				4C6643B217DD58FC00037585 /* DADDragViewController.m */,
 				4CCAD05017DE9D4F008FDC5F /* DADMenuController.h */,
@@ -302,6 +307,7 @@
 				4C6643B017DD557200037585 /* DADDragView.m in Sources */,
 				4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */,
 				4CCAD05217DE9D4F008FDC5F /* DADMenuController.m in Sources */,
+				4CBB434B17DEF64300CA4251 /* DADDragAcrossViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

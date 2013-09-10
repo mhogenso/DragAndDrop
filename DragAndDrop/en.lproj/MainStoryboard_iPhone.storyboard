@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="717" y="159"/>
         </scene>
-        <!--View Controller - Drag Across-->
+        <!--Drag Across View Controller - Drag Across-->
         <scene sceneID="Ml0-05-saf">
             <objects>
-                <viewController id="64W-5E-q4C" sceneMemberID="viewController">
+                <viewController id="64W-5E-q4C" customClass="DADDragAcrossViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lak-Ws-RCX">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,12 +134,12 @@
                                 <rect key="frame" x="209" y="0.0" width="111" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="FEL-wl-ACW">
+                                    <view contentMode="scaleToFill" id="FEL-wl-ACW" customClass="DADDragView">
                                         <rect key="frame" x="5" y="14" width="100" height="60"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.78804347829999999" green="0.096783571910000005" blue="0.087492827699999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="MT5-zK-7oJ">
+                                    <view contentMode="scaleToFill" id="MT5-zK-7oJ" customClass="DADDragView">
                                         <rect key="frame" x="5" y="82" width="100" height="60"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.2531024127" green="0.26113535180000003" blue="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -151,6 +151,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Drag Across" id="BUQ-Is-B8n"/>
+                    <connections>
+                        <outlet property="blueTile" destination="MT5-zK-7oJ" id="0ke-Kg-vgO"/>
+                        <outlet property="redTile" destination="FEL-wl-ACW" id="2MH-BV-rEL"/>
+                        <outlet property="sidebar" destination="ggU-Lb-mlV" id="ZHp-rw-xoq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUU-WW-f6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,6 +181,14 @@
         </scene>
     </scenes>
     <classes>
+        <class className="DADDragAcrossViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragAcrossViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="blueTile" candidateClass="DADDragView"/>
+                <relationship kind="outlet" name="redTile" candidateClass="DADDragView"/>
+                <relationship kind="outlet" name="sidebar" candidateClass="UIView"/>
+            </relationships>
+        </class>
         <class className="DADDragView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragView.h"/>
         </class>
@@ -199,6 +212,7 @@
         <class className="DADViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DADViewController.h"/>
             <relationships>
+                <relationship kind="action" name="resetTouch:"/>
                 <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tile" candidateClass="DADTileView"/>
             </relationships>
