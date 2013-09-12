@@ -6,23 +6,19 @@
 //  Copyright (c) 2013 Michael Hogenson. All rights reserved.
 //
 
-#import "DADDragAcrossViewController.h"
+#import "DADCanvasViewController.h"
 #import "DADDragView.h"
-#import "DADMenuController.h"
 
 #define DAD_ANIMATION_DURATION 0.15
+#define DAD_STEAL_THRESHOLD 10
 
-@interface DADDragAcrossViewController ()
+@interface DADCanvasViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView *sidebar;
-@property (assign, nonatomic) IBOutlet DADDragView *redTile;
-@property (weak, nonatomic) IBOutlet DADDragView *blueTile;
-@property (weak, nonatomic) IBOutlet DADDragView *greenTile;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation DADDragAcrossViewController
+@implementation DADCanvasViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,22 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // UIPopoverController *popOverController = [[UIPopoverController alloc] initWithContentViewController:tableResultViewController];
-    
-    _blueTile.touchBegan = _redTile.touchBegan;
-    _blueTile.touchMoved = _redTile.touchMoved;
-    _blueTile.touchEnded = _redTile.touchEnded;
-    
-    _greenTile.touchBegan = _redTile.touchBegan;
-    _greenTile.touchMoved = _redTile.touchMoved;
-    _greenTile.touchEnded = _redTile.touchEnded;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark UITableViewDelegate and UITableViewDataSource
@@ -61,7 +46,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -74,7 +59,7 @@
     __weak __block DADDragView *dragView = strongDragView;
     
     
-    dragView.backgroundColor = [UIColor colorWithRed:(arc4random()*1.0f/UINT_MAX) green:(arc4random()*1.0f/UINT_MAX) blue:(arc4random()*1.0f/UINT_MAX) alpha:(arc4random()*1.0f/UINT_MAX)];
+    dragView.backgroundColor = [UIColor colorWithRed:(arc4random()*1.0f/UINT_MAX) green:(arc4random()*1.0f/UINT_MAX) blue:(arc4random()*1.0f/UINT_MAX) alpha:1.0f];
     
     dragView.touchBegan = ^(UITouch *touch){
         // Pull out the view that was touched.
@@ -103,7 +88,7 @@
             
             CGFloat dx = movedPoint.x - offset.x;
             
-            if (dx >= 0.5) {
+            if (dx >= DAD_STEAL_THRESHOLD) {
                 if (tableView.scrollEnabled) {
                     [UIView animateWithDuration:DAD_ANIMATION_DURATION
                                      animations:^{
@@ -116,8 +101,6 @@
                 [self.view addSubview:dragTile];
                 [self.view bringSubviewToFront:tableView];
             }
-            
-//            NSLog(@"dx: %f dy: %f", movedPoint.x - offset.x, movedPoint.y - offset.y);
             
             CGRect frame = dragTile.frame;
             frame.origin.x = pointInController.x - offset.x;
@@ -138,10 +121,7 @@
         };
     };
     
-    
-    
     [cell.contentView addSubview:dragView];
-    
     return cell;
 }
 

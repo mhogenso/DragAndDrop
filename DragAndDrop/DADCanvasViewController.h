@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DADDragAcrossViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DADCanvasViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
