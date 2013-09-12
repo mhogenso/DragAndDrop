@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A569" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="s6P-kQ-L9S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4504" systemVersion="13A569" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="s6P-kQ-L9S">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
     </dependencies>
     <scenes>
         <!--View Controller - Drag and Clone-->
@@ -9,24 +10,19 @@
             <objects>
                 <viewController id="2" customClass="DADViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="qEb-gp-lWb" customClass="DADDragView">
-                                <rect key="frame" x="20" y="15" width="100" height="60"/>
+                                <rect key="frame" x="20" y="80" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kKo-IT-iDM">
-                                <rect key="frame" x="20" y="353" width="280" height="44"/>
+                                <rect key="frame" x="20" y="416" width="280" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="resetTouch:" destination="2" eventType="touchDown" id="0Iu-nf-wX3"/>
@@ -50,16 +46,16 @@
             <objects>
                 <viewController modalTransitionStyle="partialCurl" id="pIY-TW-bGr" customClass="DADDragViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXb-uj-crQ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="RMt-EO-8fK" customClass="DADDragView">
-                                <rect key="frame" x="200" y="138" width="100" height="60"/>
+                                <rect key="frame" x="200" y="152" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25310241269031164" green="0.26113535179860464" blue="0.66666666666666663" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="0MA-lb-0ER" customClass="DADDragView">
-                                <rect key="frame" x="200" y="58" width="100" height="60"/>
+                                <rect key="frame" x="200" y="78" width="100" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.78804347826086962" green="0.096783571913621372" blue="0.087492827704715476" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                             </view>
@@ -80,28 +76,27 @@
         <scene sceneID="9Yd-PW-IZn">
             <objects>
                 <tableViewController id="SSf-09-Qs1" customClass="DADMenuController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="guP-0k-v0G">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="guP-0k-v0G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="oLS-3e-EPK" style="IBUITableViewCellStyleDefault" id="H09-pM-fY1">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H09-pM-fY1" id="WB6-aD-Pbl">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oLS-3e-EPK">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -127,31 +122,47 @@
             <objects>
                 <viewController id="64W-5E-q4C" customClass="DADDragAcrossViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lak-Ws-RCX">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="ggU-Lb-mlV">
-                                <rect key="frame" x="209" y="0.0" width="111" height="416"/>
+                                <rect key="frame" x="209" y="65" width="111" height="415"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="FEL-wl-ACW" customClass="DADDragView">
-                                        <rect key="frame" x="5" y="14" width="100" height="60"/>
+                                        <rect key="frame" x="5" y="11" width="100" height="60"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.78804347829999999" green="0.096783571910000005" blue="0.087492827699999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="MT5-zK-7oJ" customClass="DADDragView">
-                                        <rect key="frame" x="5" y="82" width="100" height="60"/>
+                                        <rect key="frame" x="5" y="79" width="100" height="60"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.2531024127" green="0.26113535180000003" blue="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="Dbg-hP-OCr" customClass="DADDragView">
-                                        <rect key="frame" x="5" y="150" width="100" height="60"/>
+                                        <rect key="frame" x="5" y="147" width="100" height="60"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.24204788451212811" green="0.66666666669999997" blue="0.27574186544529516" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="nP2-tK-heD" customClass="DADTableView">
+                                <rect key="frame" x="0.0" y="65" width="100" height="415"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="cLX-gp-93r">
+                                        <rect key="frame" x="0.0" y="22" width="100" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cLX-gp-93r" id="Mjo-2F-ZBI">
+                                            <rect key="frame" x="0.0" y="0.0" width="67" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2531024127" green="0.26113535180000003" blue="0.66666666669999997" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -186,42 +197,6 @@
             <point key="canvasLocation" x="237" y="159"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DADDragAcrossViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragAcrossViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="blueTile" candidateClass="DADDragView"/>
-                <relationship kind="outlet" name="greenTile" candidateClass="DADDragView"/>
-                <relationship kind="outlet" name="redTile" candidateClass="DADDragView"/>
-                <relationship kind="outlet" name="sidebar" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="DADDragView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragView.h"/>
-        </class>
-        <class className="DADDragViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADDragViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneButtonTapped:"/>
-                <relationship kind="outlet" name="dragView" candidateClass="DADDragView"/>
-                <relationship kind="outlet" name="dragView2" candidateClass="DADDragView"/>
-            </relationships>
-        </class>
-        <class className="DADMenuController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADMenuController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="menuView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="DADViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DADViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="resetTouch:"/>
-                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tile" candidateClass="DADDragView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
