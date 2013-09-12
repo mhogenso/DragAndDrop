@@ -28,7 +28,6 @@
 		4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6643B217DD58FC00037585 /* DADDragViewController.m */; };
 		4CBB434B17DEF64300CA4251 /* DADDragAcrossViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB434A17DEF64300CA4251 /* DADDragAcrossViewController.m */; };
 		4CCAD05217DE9D4F008FDC5F /* DADMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCAD05117DE9D4F008FDC5F /* DADMenuController.m */; };
-		4CCD474617E1559700CB9413 /* DADTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD474517E1559700CB9413 /* DADTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +72,6 @@
 		4CBB434A17DEF64300CA4251 /* DADDragAcrossViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADDragAcrossViewController.m; sourceTree = "<group>"; };
 		4CCAD05017DE9D4F008FDC5F /* DADMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADMenuController.h; sourceTree = "<group>"; };
 		4CCAD05117DE9D4F008FDC5F /* DADMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADMenuController.m; sourceTree = "<group>"; };
-		4CCD474417E1559700CB9413 /* DADTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DADTableView.h; sourceTree = "<group>"; };
-		4CCD474517E1559700CB9413 /* DADTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +141,6 @@
 				4C6643B217DD58FC00037585 /* DADDragViewController.m */,
 				4CCAD05017DE9D4F008FDC5F /* DADMenuController.h */,
 				4CCAD05117DE9D4F008FDC5F /* DADMenuController.m */,
-				4CCD474417E1559700CB9413 /* DADTableView.h */,
-				4CCD474517E1559700CB9413 /* DADTableView.m */,
 				4C1FEFB217D7ACC700C380D3 /* DADViewController.h */,
 				4C1FEFB317D7ACC700C380D3 /* DADViewController.m */,
 				4C1FEFAF17D7ACC700C380D3 /* MainStoryboard_iPad.storyboard */,
@@ -305,7 +300,6 @@
 				4C1FEFB417D7ACC800C380D3 /* DADViewController.m in Sources */,
 				4C6643B017DD557200037585 /* DADDragView.m in Sources */,
 				4C6643B317DD58FC00037585 /* DADDragViewController.m in Sources */,
-				4CCD474617E1559700CB9413 /* DADTableView.m in Sources */,
 				4CCAD05217DE9D4F008FDC5F /* DADMenuController.m in Sources */,
 				4CBB434B17DEF64300CA4251 /* DADDragAcrossViewController.m in Sources */,
 			);
@@ -426,6 +420,7 @@
 		4C1FEFCD17D7ACC800C380D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: ROBERT WIGHTMAN (6M3BSZ6J39)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DragAndDrop/DragAndDrop-Prefix.pch";
 				INFOPLIST_FILE = "DragAndDrop/DragAndDrop-Info.plist";
@@ -437,6 +432,7 @@
 		4C1FEFCE17D7ACC800C380D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: ROBERT WIGHTMAN (6M3BSZ6J39)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DragAndDrop/DragAndDrop-Prefix.pch";
 				INFOPLIST_FILE = "DragAndDrop/DragAndDrop-Info.plist";
